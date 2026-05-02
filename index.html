@@ -15,20 +15,15 @@
 </head>
 <body>
 
-  <!-- ======================= LOADER ======================= -->
+  <!-- ======================= LOADER — interlocked wedding rings ======================= -->
   <div class="loader" id="loader" aria-hidden="true">
-    <div class="loader__stage">
-      <svg class="loader__amp" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path class="loader__stroke loader__stroke--l" d="M 30 100 Q 60 60, 100 100" />
-        <path class="loader__stroke loader__stroke--r" d="M 170 100 Q 140 140, 100 100" />
-        <path class="loader__amp-curve" d="M 100 60 Q 130 60, 130 95 Q 130 130, 90 130 Q 60 130, 60 105 Q 60 80, 100 80 Q 130 80, 145 110 L 165 145" />
-        <circle class="loader__seed" cx="100" cy="100" r="2.5" fill="currentColor" stroke="none" />
-      </svg>
-    </div>
-    <div class="loader__mark">
-      <img src="logo.png" alt="Divya Vithika Wedding Planners" />
-    </div>
-    <div class="loader__cap">A boutique of two — arranging the morning</div>
+    <svg class="loader__rings" viewBox="0 0 220 140" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <circle class="loader__ring loader__ring--l" cx="80"  cy="70" r="48"/>
+      <circle class="loader__ring loader__ring--r" cx="140" cy="70" r="48"/>
+      <circle class="loader__sparkle loader__sparkle--1" cx="80"  cy="22" r="2" fill="currentColor" stroke="none"/>
+      <circle class="loader__sparkle loader__sparkle--2" cx="140" cy="22" r="2" fill="currentColor" stroke="none"/>
+    </svg>
+    <div class="loader__cap">A boutique of two &mdash; arranging the morning</div>
   </div>
 
   <!-- ======================= CURSOR ======================= -->
@@ -70,7 +65,7 @@
     <!-- ======================= 01 HERO ======================= -->
     <section class="hero" data-fade>
       <div class="hero__photo">
-        <div class="hero__inner" style="background-image:url('Image/hero.jpg');"></div>
+        <div class="hero__inner" style="background-image:url('Image/hero2.jpg');"></div>
         <div class="hero__veil"></div>
       </div>
       <div class="hero__content">
@@ -84,11 +79,6 @@
           <a href="#weddings" class="btn btn--ink" data-cursor>See our weddings</a>
           <a href="#contact" class="btn btn--ghost-light" data-cursor>Plan yours</a>
         </div>
-      </div>
-      <div class="hero__signature">
-        <span>Divya</span>
-        <span class="hero__amp">&amp;</span>
-        <span>Vithika</span>
       </div>
       <a href="#weddings" class="hero__scroll" aria-label="Scroll to weddings" data-cursor>
         <span>Scroll</span>
@@ -351,7 +341,12 @@
       <div class="foot__brand">
         <img src="logo.png" alt="Divya Vithika Wedding Planners" />
         <p>Bangalore's most-loved boutique wedding planners. Divya &amp; Vithika, since 2010.</p>
-        <p class="foot__addr">Bengaluru · Karnataka · India</p>
+        <address class="foot__addr">
+          Divya Vithika Enterprises Pvt Ltd<br />
+          Oxford Tower, Unit 27, Lower Ground Level<br />
+          HAL Old Airport Rd, 139, Domlur<br />
+          Bengaluru, Karnataka 560008
+        </address>
       </div>
 
       <div class="foot__col">
@@ -367,29 +362,21 @@
       </div>
 
       <div class="foot__col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="#services">Full Wedding Planning</a></li>
-          <li><a href="#services">Destination Weddings</a></li>
-          <li><a href="#services">Décor &amp; Design</a></li>
-          <li><a href="#services">Sangeet &amp; Mehendi</a></li>
-          <li><a href="#services">Logistics &amp; Guests</a></li>
-          <li><a href="#services">Photo &amp; Film</a></li>
-          <li><a href="#services">Honeymoon Planning</a></li>
-        </ul>
-      </div>
-
-      <div class="foot__col">
         <h4>Reach the founders</h4>
         <ul class="foot__contact">
-          <li><span>Vithika Agarwal</span><a href="tel:+919900239080">+91 99002 39080</a></li>
           <li><span>Divya Chauhan</span><a href="tel:+919845228614">+91 98452 28614</a></li>
+          <li><span>Vithika Agarwal</span><a href="tel:+919900239080">+91 99002 39080</a></li>
           <li><span>Email</span><a href="mailto:info@divyavithika.com">info@divyavithika.com</a></li>
+          <li><span>Hours</span><em>Mon &mdash; Sat &middot; 10am to 7pm</em></li>
         </ul>
-        <h4 class="foot__news">Letters from the studio</h4>
-        <form class="foot__form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thank you ✓';">
-          <input type="email" placeholder="Your email" required aria-label="Email for newsletter" />
-          <button type="submit" data-cursor>Subscribe</button>
+        <h4 class="foot__news">Send a message</h4>
+        <p class="foot__news-copy">Tell us about your wedding &mdash; we usually reply within a working day.</p>
+        <form class="foot__form foot__form--full" action="mailto:info@divyavithika.com" method="post" enctype="text/plain" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thank you &check; &mdash; we will write back soon';">
+          <input type="text" name="name" placeholder="Your name" required aria-label="Your name" />
+          <input type="email" name="email" placeholder="Email" required aria-label="Email" />
+          <input type="tel" name="phone" placeholder="Phone (optional)" aria-label="Phone" />
+          <textarea name="message" placeholder="A line about your wedding &mdash; date, location, guest count" rows="3" required aria-label="Message"></textarea>
+          <button type="submit" data-cursor>Send message</button>
         </form>
       </div>
 
@@ -398,7 +385,8 @@
         <ul class="foot__social">
           <li><a href="https://instagram.com/divyavithika/" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="https://facebook.com/dvweddingplanners" target="_blank" rel="noopener">Facebook</a></li>
-          <li><a href="https://pinterest.com/dvweddings/pins/follow/" target="_blank" rel="noopener">Pinterest</a></li>
+          <li><a href="https://pinterest.com/dvweddings/" target="_blank" rel="noopener">Pinterest</a></li>
+          <li><a href="https://www.divyavithika.com" target="_blank" rel="noopener">Main Website</a></li>
         </ul>
         <h4 class="foot__legal">Legal</h4>
         <ul>

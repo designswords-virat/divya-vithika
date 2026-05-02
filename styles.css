@@ -138,7 +138,7 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 .btn--ghost-light:hover { background: var(--paper); color: var(--rose-deep); border-color: var(--paper); gap: 22px; }
 
 /* ============================================================
-   LOADER — two strokes converging into an ampersand, then logo
+   LOADER — two interlocking wedding rings, drawing in
    ============================================================ */
 .loader {
   position: fixed; inset: 0;
@@ -147,46 +147,39 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   display: flex;
   flex-direction: column;
   align-items: center; justify-content: center;
-  gap: 36px;
+  gap: 30px;
   transition: opacity 0.9s ease, visibility 0s linear 0.9s;
 }
 .loader.is-hidden { opacity: 0; visibility: hidden; }
 
-.loader__stage {
-  width: clamp(240px, 30vw, 320px);
-  height: clamp(240px, 30vw, 320px);
-  position: relative;
+.loader__rings {
+  width: clamp(220px, 28vw, 320px);
+  height: auto;
   color: var(--rose);
+  overflow: visible;
 }
-.loader__amp { width: 100%; height: 100%; }
-.loader__stroke {
+.loader__ring {
   stroke: var(--rose);
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  animation: drawIn 1.6s ease forwards;
+  stroke-dasharray: 302;     /* approx 2*pi*48 */
+  stroke-dashoffset: 302;
+  transform-origin: center;
+  animation: ringDraw 1.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
-.loader__stroke--l { animation-delay: 0.1s; }
-.loader__stroke--r { animation-delay: 0.3s; }
-.loader__amp-curve {
-  stroke: var(--rose);
-  stroke-dasharray: 460;
-  stroke-dashoffset: 460;
-  animation: drawIn 2.0s ease 0.9s forwards;
-}
-.loader__seed {
-  opacity: 0;
-  animation: seedIn 0.6s ease 0.6s forwards;
-}
-@keyframes drawIn { to { stroke-dashoffset: 0; } }
-@keyframes seedIn { to { opacity: 1; transform: scale(1.4); transform-origin: 100px 100px; } }
+.loader__ring--l { animation-delay: 0.15s; }
+.loader__ring--r { animation-delay: 0.55s; }
+@keyframes ringDraw { to { stroke-dashoffset: 0; } }
 
-.loader__mark {
+.loader__sparkle {
   opacity: 0;
-  transform: translateY(8px);
-  animation: markIn 0.8s ease 1.6s forwards;
+  animation: sparkle 0.6s ease forwards;
 }
-.loader__mark img { width: clamp(180px, 22vw, 240px); }
-@keyframes markIn { to { opacity: 1; transform: translateY(0); } }
+.loader__sparkle--1 { animation-delay: 1.7s; }
+.loader__sparkle--2 { animation-delay: 1.85s; }
+@keyframes sparkle {
+  0%   { opacity: 0; transform: translateY(4px); }
+  60%  { opacity: 1; transform: translateY(-2px) scale(1.6); }
+  100% { opacity: 0.85; transform: translateY(0) scale(1); }
+}
 
 .loader__cap {
   font-family: var(--display);
@@ -195,8 +188,9 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   letter-spacing: 0.04em;
   color: var(--ink-soft);
   opacity: 0;
-  animation: markIn 0.8s ease 2.0s forwards;
+  animation: capIn 0.8s ease 2.0s forwards;
 }
+@keyframes capIn { to { opacity: 1; } }
 
 /* ============================================================
    CURSOR — rose dot + ring, mix-blend-mode for inversion
@@ -416,21 +410,10 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   inset: 0;
   background:
     linear-gradient(180deg,
-      rgba(26, 15, 26, 0.65) 0%,
-      rgba(26, 15, 26, 0.30) 28%,
-      rgba(26, 15, 26, 0.55) 55%,
-      rgba(26, 15, 26, 0.88) 82%,
-      rgba(26, 15, 26, 0.95) 100%);
-}
-.hero__veil::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 22% 88%,
-      rgba(26, 15, 26, 0.55) 0%,
-      rgba(26, 15, 26, 0) 70%);
-  pointer-events: none;
+      rgba(26, 15, 26, 0.18) 0%,
+      rgba(26, 15, 26, 0.04) 25%,
+      rgba(26, 15, 26, 0.04) 75%,
+      rgba(26, 15, 26, 0.22) 100%);
 }
 .hero__content {
   position: relative;
@@ -477,26 +460,6 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   line-height: 1.55;
 }
 .hero__actions { display: flex; gap: 14px; flex-wrap: wrap; }
-
-.hero__signature {
-  position: absolute;
-  top: calc(var(--nav-h) + 28px);
-  right: var(--pad);
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-family: var(--display);
-  font-style: italic;
-  color: var(--paper);
-  opacity: 0.92;
-  font-size: clamp(15px, 1.4vw, 20px);
-  letter-spacing: 0.02em;
-}
-.hero__signature .hero__amp {
-  font-size: clamp(28px, 3.4vw, 48px);
-  color: var(--rose);
-  line-height: 1;
-}
 
 .hero__scroll {
   position: absolute;
@@ -1322,7 +1285,7 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 }
 .foot__top {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1.4fr 1fr;
+  grid-template-columns: 1.4fr 1fr 1.4fr 1fr;
   gap: clamp(28px, 3vw, 56px);
   max-width: 1600px;
   margin: 0 auto;
@@ -1347,10 +1310,11 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 .foot__addr {
   font-family: var(--sans) !important;
   font-style: normal !important;
-  font-size: 12px !important;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(251,247,244,0.6) !important;
+  font-size: 12.5px !important;
+  line-height: 1.65;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: rgba(251,247,244,0.7) !important;
 }
 .foot__col h4 {
   font-family: var(--sans);
@@ -1386,20 +1350,30 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   text-transform: uppercase;
   color: rgba(251,247,244,0.5);
 }
-.foot__contact li a {
+.foot__contact li a,
+.foot__contact li em {
   font-family: var(--display);
   font-style: italic;
   font-size: 16px !important;
   color: var(--paper) !important;
 }
 .foot__news, .foot__legal { margin-top: 30px; }
+.foot__news-copy {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: rgba(251,247,244,0.65);
+  margin-bottom: 14px;
+  max-width: 30ch;
+}
 .foot__form {
   display: flex;
   border-bottom: 1px solid var(--rule-light);
   padding-bottom: 8px;
   margin-bottom: 18px;
 }
-.foot__form input {
+.foot__form input,
+.foot__form textarea {
   flex: 1;
   background: transparent;
   border: none;
@@ -1408,8 +1382,10 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   font-family: var(--sans);
   font-size: 14px;
   padding: 8px 0;
+  resize: none;
 }
-.foot__form input::placeholder { color: rgba(251,247,244,0.4); }
+.foot__form input::placeholder,
+.foot__form textarea::placeholder { color: rgba(251,247,244,0.4); }
 .foot__form button {
   font-family: var(--sans);
   font-size: 11px;
@@ -1417,6 +1393,42 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--rose);
+  align-self: flex-end;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+.foot__form button:hover { color: var(--paper); }
+
+/* multi-field send-message variant */
+.foot__form--full {
+  flex-direction: column;
+  gap: 4px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.foot__form--full input,
+.foot__form--full textarea {
+  border-bottom: 1px solid var(--rule-light);
+  padding: 10px 0;
+  font-size: 13.5px;
+  transition: border-color 0.3s ease;
+}
+.foot__form--full input:focus,
+.foot__form--full textarea:focus { border-bottom-color: var(--rose); }
+.foot__form--full textarea { min-height: 60px; line-height: 1.5; }
+.foot__form--full button {
+  margin-top: 14px;
+  align-self: flex-start;
+  padding: 11px 22px;
+  border: 1px solid var(--rose);
+  border-radius: 999px;
+  letter-spacing: 0.26em;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.foot__form--full button:hover {
+  background: var(--rose);
+  color: var(--paper);
+  border-color: var(--rose);
 }
 
 .foot__bottom {
@@ -1496,14 +1508,6 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
     min-height: 600px;
   }
   .hero__inner { background-position: 62% 28%; }
-  .hero__veil {
-    background:
-      linear-gradient(180deg,
-        rgba(26, 15, 26, 0.70) 0%,
-        rgba(26, 15, 26, 0.42) 22%,
-        rgba(26, 15, 26, 0.72) 55%,
-        rgba(26, 15, 26, 0.96) 100%);
-  }
   .hero__title { font-size: clamp(38px, 12vw, 58px); line-height: 0.98; }
   .hero__lede { font-size: 14.5px; max-width: 100%; margin: 16px 0 22px; }
   .hero__eyebrow { font-size: 10px; margin-bottom: 16px; }
@@ -1514,14 +1518,6 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
     letter-spacing: 0.18em;
   }
   .hero__scroll { display: none; }
-  .hero__signature {
-    top: calc(var(--nav-h) + 12px);
-    right: var(--pad);
-    font-size: 11px;
-    gap: 8px;
-    opacity: 0.85;
-  }
-  .hero__signature .hero__amp { font-size: 20px; }
 
   /* CARDS — clear separators so text belongs to the right card */
   .news__grid { grid-template-columns: 1fr; gap: 0; }
