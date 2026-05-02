@@ -415,7 +415,22 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(26, 15, 26, 0.68) 0%, rgba(185, 31, 88, 0.10) 28%, rgba(244, 163, 64, 0.05) 55%, rgba(26, 15, 26, 0.78) 100%);
+    linear-gradient(180deg,
+      rgba(26, 15, 26, 0.65) 0%,
+      rgba(26, 15, 26, 0.30) 28%,
+      rgba(26, 15, 26, 0.55) 55%,
+      rgba(26, 15, 26, 0.88) 82%,
+      rgba(26, 15, 26, 0.95) 100%);
+}
+.hero__veil::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 22% 88%,
+      rgba(26, 15, 26, 0.55) 0%,
+      rgba(26, 15, 26, 0) 70%);
+  pointer-events: none;
 }
 .hero__content {
   position: relative;
@@ -1484,10 +1499,10 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   .hero__veil {
     background:
       linear-gradient(180deg,
-        rgba(26, 15, 26, 0.62) 0%,
-        rgba(26, 15, 26, 0.28) 26%,
-        rgba(26, 15, 26, 0.55) 62%,
-        rgba(26, 15, 26, 0.94) 100%);
+        rgba(26, 15, 26, 0.70) 0%,
+        rgba(26, 15, 26, 0.42) 22%,
+        rgba(26, 15, 26, 0.72) 55%,
+        rgba(26, 15, 26, 0.96) 100%);
   }
   .hero__title { font-size: clamp(38px, 12vw, 58px); line-height: 0.98; }
   .hero__lede { font-size: 14.5px; max-width: 100%; margin: 16px 0 22px; }
