@@ -852,54 +852,60 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   max-width: 38ch;
 }
 
-.weddings__services {
-  max-width: 1480px;
-  margin: clamp(80px, 12vh, 140px) auto 0;
-  padding-top: clamp(40px, 6vh, 70px);
+/* ============================================================
+   05 SERVICES — icon-led, no numbering
+   ============================================================ */
+.services-section {
+  padding: clamp(80px, 14vh, 160px) var(--pad);
+  background: var(--paper-warm);
   border-top: 1px solid var(--rule);
 }
-.weddings__services h3 {
-  font-family: var(--display);
-  font-weight: 400;
-  font-size: clamp(28px, 3vw, 44px);
-  line-height: 1.1;
-  color: var(--ink);
-  margin-bottom: clamp(28px, 4vh, 50px);
-  max-width: 22ch;
+.services-section__head {
+  max-width: 1480px;
+  margin: 0 auto clamp(50px, 8vh, 90px);
 }
+.services-section__head .lede { max-width: 52ch; }
 .services {
+  max-width: 1480px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(20px, 2.4vw, 36px);
+  gap: clamp(28px, 3vw, 50px) clamp(24px, 3vw, 44px);
 }
 .services li {
-  padding: 28px 0;
+  padding: 32px 0 0;
   border-top: 1px solid var(--rule);
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  position: relative;
+  gap: 14px;
 }
-.services li span {
-  font-family: var(--display);
-  font-style: italic;
-  font-size: 13px;
+.service__icon {
+  width: 48px;
+  height: 48px;
+  color: var(--rose);
+  margin-bottom: 8px;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+.service__icon svg { width: 100%; height: 100%; display: block; }
+.services li:hover .service__icon {
   color: var(--rose-deep);
-  letter-spacing: 0.04em;
+  transform: translateY(-2px) rotate(-3deg);
 }
 .services li strong {
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(20px, 1.6vw, 24px);
+  font-size: clamp(22px, 1.8vw, 28px);
   color: var(--ink);
-  line-height: 1.2;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
 }
 .services li em {
   font-family: var(--sans);
   font-style: normal;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--ink-soft);
-  line-height: 1.55;
+  line-height: 1.6;
+  max-width: 36ch;
 }
 
 /* ============================================================

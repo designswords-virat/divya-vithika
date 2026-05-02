@@ -19,10 +19,8 @@
   <div class="loader" id="loader" aria-hidden="true">
     <div class="loader__stage">
       <svg class="loader__amp" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <!-- Two converging strokes -->
         <path class="loader__stroke loader__stroke--l" d="M 30 100 Q 60 60, 100 100" />
         <path class="loader__stroke loader__stroke--r" d="M 170 100 Q 140 140, 100 100" />
-        <!-- Ampersand bowl -->
         <path class="loader__amp-curve" d="M 100 60 Q 130 60, 130 95 Q 130 130, 90 130 Q 60 130, 60 105 Q 60 80, 100 80 Q 130 80, 145 110 L 165 145" />
         <circle class="loader__seed" cx="100" cy="100" r="2.5" fill="currentColor" stroke="none" />
       </svg>
@@ -46,13 +44,12 @@
     </a>
     <nav class="nav__links" aria-label="Primary">
       <a href="#weddings" data-cursor>Weddings</a>
-      <a href="#news" data-cursor>News</a>
       <a href="#founders" data-cursor>About</a>
-      <a href="#weddings" data-cursor>Services</a>
-      <a href="#testimonials" data-cursor>Testimonials</a>
-      <a href="#cta" data-cursor>Contact</a>
+      <a href="#phases" data-cursor>How we work</a>
+      <a href="#services" data-cursor>Services</a>
+      <a href="#contact" data-cursor>Contact</a>
     </nav>
-    <a href="#cta" class="nav__cta" data-cursor>Plan with us</a>
+    <a href="#contact" class="nav__cta" data-cursor>Plan with us</a>
     <button class="nav__hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>
@@ -61,11 +58,11 @@
   <!-- ======================= MOBILE MENU ======================= -->
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="#weddings">Weddings</a>
-    <a href="#news">News</a>
     <a href="#founders">About</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#cta">Contact</a>
-    <a href="#cta" class="mobile-menu__cta">Plan with us</a>
+    <a href="#phases">How we work</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="mobile-menu__cta">Plan with us</a>
   </div>
 
   <main id="top">
@@ -73,7 +70,7 @@
     <!-- ======================= 01 HERO ======================= -->
     <section class="hero" data-fade>
       <div class="hero__photo">
-        <div class="hero__inner" style="background-image:url('https://images.unsplash.com/photo-1604017011826-d3b4c23f8914?w=2400&q=85&auto=format&fit=crop');"></div>
+        <div class="hero__inner" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2025/01/Ruchika-and-Shikhar-040.jpg');"></div>
         <div class="hero__veil"></div>
       </div>
       <div class="hero__content">
@@ -85,7 +82,7 @@
         <p class="hero__lede">A boutique of two — Divya &amp; Vithika — designing intimate, deeply personal Indian weddings across Bangalore, the South, and beyond.</p>
         <div class="hero__actions">
           <a href="#weddings" class="btn btn--ink" data-cursor>See our weddings</a>
-          <a href="#cta" class="btn btn--ghost-light" data-cursor>Plan yours</a>
+          <a href="#contact" class="btn btn--ghost-light" data-cursor>Plan yours</a>
         </div>
       </div>
       <div class="hero__signature">
@@ -93,59 +90,77 @@
         <span class="hero__amp">&amp;</span>
         <span>Vithika</span>
       </div>
-      <a href="#reel" class="hero__scroll" aria-label="Scroll to gallery" data-cursor>
+      <a href="#weddings" class="hero__scroll" aria-label="Scroll to weddings" data-cursor>
         <span>Scroll</span>
         <svg viewBox="0 0 24 60" aria-hidden="true"><line x1="12" y1="0" x2="12" y2="58" stroke="currentColor" stroke-width="1" /></svg>
       </a>
     </section>
 
-    <!-- ======================= 02 REEL ======================= -->
-    <section class="reel" id="reel" data-fade>
-      <div class="reel__head">
-        <div class="reel__eye">The Reel · A few moments</div>
-        <h2 class="section-title">From <em>our</em> book.</h2>
-        <p class="reel__sub">Eight frames from recent weddings — a slow scroll through the year, the way we like to remember it.</p>
+    <!-- ======================= 02 WEDDINGS ======================= -->
+    <section class="weddings" id="weddings" data-fade>
+      <div class="weddings__head">
+        <div class="eye">Our weddings</div>
+        <h2 class="section-title">Each one, <em>its own</em><br />small world.</h2>
+        <p class="lede">A few weddings we've loved hosting — each tailored from the colour of the napkin to the pace of the morning <em>baraat</em>.</p>
       </div>
 
-      <div class="reel__rail" id="reelRail">
-        <figure class="reel__slide">
-          <div class="reel__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2025/09/FeaturedImage350-1.jpg');"></div>
-          <figcaption><span>01</span><strong>Aishwarya &amp; Mohnish</strong></figcaption>
-        </figure>
-        <figure class="reel__slide">
-          <div class="reel__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2025/09/FeaturedImage350.jpg');"></div>
-          <figcaption><span>02</span><strong>Merzia &amp; Alec</strong></figcaption>
-        </figure>
-        <figure class="reel__slide">
-          <div class="reel__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2025/01/FeaturedImage350-1.jpg');"></div>
-          <figcaption><span>03</span><strong>Sadhvi &amp; Prashant</strong></figcaption>
-        </figure>
-        <figure class="reel__slide">
-          <div class="reel__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2025/01/FeaturedImage350.jpg');"></div>
-          <figcaption><span>04</span><strong>Holm-Ingolf &amp; Chitralekha</strong></figcaption>
-        </figure>
-        <figure class="reel__slide">
-          <div class="reel__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2025/01/Ruchika-and-Shikhar-040.jpg');"></div>
-          <figcaption><span>05</span><strong>Ruchika &amp; Shikhar</strong></figcaption>
-        </figure>
-        <figure class="reel__slide">
-          <div class="reel__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2025/01/Feature.jpg');"></div>
-          <figcaption><span>06</span><strong>Namratha &amp; Rohit</strong></figcaption>
-        </figure>
-        <figure class="reel__slide">
-          <div class="reel__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2024/08/Sanjana-and-Soorya-040.jpg');"></div>
-          <figcaption><span>07</span><strong>Sanjana &amp; Soorya</strong></figcaption>
-        </figure>
-        <figure class="reel__slide">
-          <div class="reel__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2024/07/Diya-and-Joe-030.jpg');"></div>
-          <figcaption><span>08</span><strong>Diya &amp; Joe</strong></figcaption>
-        </figure>
+      <div class="weddings__hero">
+        <div class="weddings__heroImg" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2025/09/FeaturedImage350-1.jpg');"></div>
+        <div class="weddings__heroBadge">
+          <span>Featured Album</span>
+          <strong>Aishwarya &amp; Mohnish · 2025</strong>
+        </div>
       </div>
 
-      <div class="reel__nav">
-        <button class="reel__btn" id="reelPrev" aria-label="Previous frames" data-cursor>← Prev</button>
-        <div class="reel__progress"><span id="reelBar"></span></div>
-        <button class="reel__btn" id="reelNext" aria-label="Next frames" data-cursor>Next →</button>
+      <div class="weddings__grid">
+        <article class="card">
+          <div class="card__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2024/07/Dhriti-and-Varun-001.jpg');"></div>
+          <div class="card__body">
+            <div class="card__meta">2024</div>
+            <h3>Dhriti &amp; Varun</h3>
+            <p>An intimate Bengaluru wedding — bespoke décor, hand-laid flowers, and a quiet morning <em>pheras</em> ceremony.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2024/08/Sanjana-and-Soorya-040.jpg');"></div>
+          <div class="card__body">
+            <div class="card__meta">2024</div>
+            <h3>Sanjana &amp; Soorya</h3>
+            <p>A two-part celebration — a private court wedding followed by a traditional ceremony in candle and brass.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2023/05/Rhea-and-Abhishek-031.jpg');"></div>
+          <div class="card__body">
+            <div class="card__meta">2023</div>
+            <h3>Rhea &amp; Abhishek</h3>
+            <p>A celebration of family and faith — three days of music, mehendi, and a sun-soaked afternoon ceremony.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2023/05/001.jpg');"></div>
+          <div class="card__body">
+            <div class="card__meta">2023</div>
+            <h3>Meghana &amp; Krishna</h3>
+            <p>A modern-traditional union — pastel florals, custom stationery, and a sangeet-night dance set we still hum.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2022/04/Shrada-and-Anchit-020.jpg');"></div>
+          <div class="card__body">
+            <div class="card__meta">2022</div>
+            <h3>Anchit &amp; Shrada</h3>
+            <p>Pastel-pink and ivory — a bright Bangalore wedding with classic floral mandap and 250 guests in linen.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2020/04/Will-and-Kruthika-050.jpg');"></div>
+          <div class="card__body">
+            <div class="card__meta">2020</div>
+            <h3>Kruthika &amp; Will</h3>
+            <p>An East-meets-West wedding — South Indian rituals at dawn, a garden reception, two cultures, one home.</p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -167,12 +182,12 @@
             <li><span data-count="120" data-suffix="+">0</span><strong>Weddings hand-planned</strong></li>
             <li><span data-count="1">0</span><strong>Wedding at a time</strong></li>
           </ul>
-          <a href="#cta" class="link" data-cursor>Begin a conversation</a>
+          <a href="#contact" class="link" data-cursor>Begin a conversation</a>
         </div>
       </div>
     </section>
 
-    <!-- ======================= 04 HOW WE WORK ======================= -->
+    <!-- ======================= 04 PHASES ======================= -->
     <section class="phases" id="phases" data-fade>
       <div class="phases__head">
         <div class="eye">How we work</div>
@@ -216,267 +231,122 @@
       </div>
     </section>
 
-    <!-- ======================= 05 WEDDINGS ======================= -->
-    <section class="weddings" id="weddings" data-fade>
-      <div class="weddings__head">
-        <div class="eye">Our weddings</div>
-        <h2 class="section-title">Each one, <em>its own</em><br />small world.</h2>
-        <p class="lede">A few weddings we've loved hosting — each tailored from the colour of the napkin to the pace of the morning <em>baraat</em>.</p>
-      </div>
-
-      <div class="weddings__hero">
-        <div class="weddings__heroImg" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2025/09/FeaturedImage350-1.jpg');"></div>
-        <div class="weddings__heroBadge">
-          <span>Featured Album</span>
-          <strong>Aishwarya &amp; Mohnish · 2025</strong>
-        </div>
-      </div>
-
-      <div class="weddings__grid">
-        <article class="card">
-          <div class="card__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2024/07/Dhriti-and-Varun-001.jpg');"></div>
-          <div class="card__body">
-            <div class="card__meta"><span>01</span> · 2024</div>
-            <h3>Dhriti &amp; Varun</h3>
-            <p>An intimate Bengaluru wedding — bespoke décor, hand-laid flowers, and a quiet morning <em>pheras</em> ceremony.</p>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2024/08/Sanjana-and-Soorya-040.jpg');"></div>
-          <div class="card__body">
-            <div class="card__meta"><span>02</span> · 2024</div>
-            <h3>Sanjana &amp; Soorya</h3>
-            <p>A two-part celebration — a private court wedding followed by a traditional ceremony in candle and brass.</p>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2023/05/Rhea-and-Abhishek-031.jpg');"></div>
-          <div class="card__body">
-            <div class="card__meta"><span>03</span> · 2023</div>
-            <h3>Rhea &amp; Abhishek</h3>
-            <p>A celebration of family and faith — three days of music, mehendi, and a sun-soaked afternoon ceremony.</p>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2023/05/001.jpg');"></div>
-          <div class="card__body">
-            <div class="card__meta"><span>04</span> · 2023</div>
-            <h3>Meghana &amp; Krishna</h3>
-            <p>A modern-traditional union — pastel florals, custom stationery, and a sangeet-night dance set we still hum.</p>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2022/04/Shrada-and-Anchit-020.jpg');"></div>
-          <div class="card__body">
-            <div class="card__meta"><span>05</span> · 2022</div>
-            <h3>Anchit &amp; Shrada</h3>
-            <p>Pastel-pink and ivory — a bright Bangalore wedding with classic floral mandap and 250 guests in linen.</p>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2020/04/Will-and-Kruthika-050.jpg');"></div>
-          <div class="card__body">
-            <div class="card__meta"><span>06</span> · 2020</div>
-            <h3>Kruthika &amp; Will</h3>
-            <p>An East-meets-West wedding — South Indian rituals at dawn, a garden reception, two cultures, one home.</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="weddings__services">
+    <!-- ======================= 05 SERVICES ======================= -->
+    <section class="services-section" id="services" data-fade>
+      <div class="services-section__head">
         <div class="eye">What we do</div>
-        <h3>Services, the whole quiet way.</h3>
-        <ul class="services">
-          <li><span>01</span><strong>Full Wedding Planning</strong><em>From the first phone call to the morning after.</em></li>
-          <li><span>02</span><strong>Destination Weddings</strong><em>Mysore, Coorg, Goa, Udaipur — anywhere your story lives.</em></li>
-          <li><span>03</span><strong>Décor &amp; Design</strong><em>Bespoke styling, sourced and hand-laid by us.</em></li>
-          <li><span>04</span><strong>Sangeet &amp; Mehendi Curation</strong><em>The smaller days, given the same care.</em></li>
-          <li><span>05</span><strong>Logistics &amp; Guest Management</strong><em>Hotels, transfers, hampers — every guest looked after.</em></li>
-          <li><span>06</span><strong>Wedding Stationery</strong><em>Printed invitations, save-the-dates, day-of menus.</em></li>
-          <li><span>07</span><strong>Photo &amp; Film Direction</strong><em>We work with photographers we trust, and brief them for you.</em></li>
-          <li><span>08</span><strong>Honeymoon Planning</strong><em>The week after the wedding, also handled.</em></li>
-          <li><span>09</span><strong>Anniversary Celebrations</strong><em>For couples we've already had the privilege of marrying.</em></li>
-        </ul>
+        <h2 class="section-title">Services, the <em>whole quiet</em> way.</h2>
+        <p class="lede">From the first phone call to the morning after — and every small day in between. Nine ways we hold a wedding for you.</p>
       </div>
-    </section>
-
-    <!-- ======================= 06 PASSPORT — Where we plan ======================= -->
-    <section class="passport" id="passport" data-fade>
-      <div class="passport__head">
-        <div class="eye">Where we plan</div>
-        <h2 class="section-title">A <em>passport</em><br />of cities.</h2>
-        <p class="lede">We're a Bangalore studio — but we travel. Below, the cities we plan in most often, and the months we love them best.</p>
-      </div>
-      <div class="passport__table">
-        <header class="passport__row passport__row--head">
-          <div class="passport__city">City</div>
-          <div class="passport__months">
-            <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+      <ul class="services">
+        <li>
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="19" r="6.5"/>
+              <circle cx="21" cy="19" r="6.5"/>
+              <path d="M8 8l3 4M24 8l-3 4M16 5v3"/>
+            </svg>
           </div>
-        </header>
-        <div class="passport__row">
-          <div class="passport__city"><strong>Bangalore</strong><em>Home studio</em></div>
-          <div class="passport__months passport__dots">
-            <span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot"></span><span class="dot"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span>
+          <strong>Full Wedding Planning</strong>
+          <em>From the first phone call to the morning after.</em>
+        </li>
+        <li>
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M28 4L4 14l9 4 4 9z"/>
+              <path d="M28 4L13 18"/>
+            </svg>
           </div>
-        </div>
-        <div class="passport__row">
-          <div class="passport__city"><strong>Mysore</strong><em>Palace weddings</em></div>
-          <div class="passport__months passport__dots">
-            <span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span>
+          <strong>Destination Weddings</strong>
+          <em>Mysore, Coorg, Goa, Udaipur — anywhere your story lives.</em>
+        </li>
+        <li>
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="16" cy="16" r="3"/>
+              <path d="M16 4c-3 4-3 6 0 9M16 28c3-4 3-6 0-9M4 16c4-3 6-3 9 0M28 16c-4 3-6 3-9 0"/>
+              <path d="M8 8c2 0 4 2 5 4M24 24c-2 0-4-2-5-4M24 8c-2 0-4 2-5 4M8 24c2 0 4-2 5-4"/>
+            </svg>
           </div>
-        </div>
-        <div class="passport__row">
-          <div class="passport__city"><strong>Coorg</strong><em>Coffee estates</em></div>
-          <div class="passport__months passport__dots">
-            <span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span>
+          <strong>Décor &amp; Design</strong>
+          <em>Bespoke styling, sourced and hand-laid by us.</em>
+        </li>
+        <li>
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 6v17"/>
+              <ellipse cx="10" cy="23" rx="3" ry="2.4"/>
+              <path d="M13 6c4-1 9 0 9 5"/>
+              <path d="M22 11v12"/>
+              <ellipse cx="19" cy="23" rx="3" ry="2.4"/>
+            </svg>
           </div>
-        </div>
-        <div class="passport__row">
-          <div class="passport__city"><strong>Goa</strong><em>Beach &amp; resort</em></div>
-          <div class="passport__months passport__dots">
-            <span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span>
+          <strong>Sangeet &amp; Mehendi Curation</strong>
+          <em>The smaller days, given the same care.</em>
+        </li>
+        <li>
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="11" width="22" height="15"/>
+              <path d="M11 11V6h10v5"/>
+              <path d="M16 15v7"/>
+            </svg>
           </div>
-        </div>
-        <div class="passport__row">
-          <div class="passport__city"><strong>Udaipur</strong><em>Lake-palace destinations</em></div>
-          <div class="passport__months passport__dots">
-            <span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span>
+          <strong>Logistics &amp; Guest Management</strong>
+          <em>Hotels, transfers, hampers — every guest looked after.</em>
+        </li>
+        <li>
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="8" width="24" height="16"/>
+              <path d="M4 10l12 8 12-8"/>
+              <path d="M4 22l8-6M28 22l-8-6"/>
+            </svg>
           </div>
-        </div>
-        <div class="passport__row">
-          <div class="passport__city"><strong>Kerala</strong><em>Backwater estates</em></div>
-          <div class="passport__months passport__dots">
-            <span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span>
+          <strong>Wedding Stationery</strong>
+          <em>Printed invitations, save-the-dates, day-of menus.</em>
+        </li>
+        <li>
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="9" width="26" height="18"/>
+              <circle cx="16" cy="18" r="5"/>
+              <path d="M11 9l2-3h6l2 3"/>
+              <circle cx="24" cy="13" r="0.6" fill="currentColor"/>
+            </svg>
           </div>
-        </div>
-        <div class="passport__row">
-          <div class="passport__city"><strong>Anywhere abroad</strong><em>On request</em></div>
-          <div class="passport__months passport__dots passport__dots--all">
-            <span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span><span class="dot dot--on"></span>
+          <strong>Photo &amp; Film Direction</strong>
+          <em>We work with photographers we trust, and brief them for you.</em>
+        </li>
+        <li>
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="16" cy="13" r="5"/>
+              <path d="M16 4v3M16 20v3M5 13h3M24 13h3M8 5l2 2M22 5l-2 2"/>
+              <path d="M3 26c3-2 5 0 8-1s5 1 8 0 5-2 8-1 2 2 2 2"/>
+            </svg>
           </div>
-        </div>
-      </div>
-      <p class="passport__note"><span>●</span> Open dates &nbsp; · &nbsp; <span class="dot-off">●</span> Off-season — book at least a year ahead</p>
-    </section>
-
-    <!-- ======================= 07 TESTIMONIALS ======================= -->
-    <section class="testimonials" id="testimonials" data-fade>
-      <div class="testimonials__photo">
-        <div class="testimonials__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2015/03/TESTIMONIALS-03.jpg');"></div>
-      </div>
-      <div class="testimonials__copy">
-        <div class="eye">Client love</div>
-        <h2 class="section-title">They <em>said</em><br />it best.</h2>
-
-        <div class="carousel" id="carousel">
-          <div class="carousel__track" id="carouselTrack">
-            <blockquote class="quote">
-              <p>"Divya &amp; Vithika don't plan weddings — they <em>hold</em> them. We were two of the calmest people in the room, and that is entirely because of the two of them."</p>
-              <footer>— Aishwarya &amp; Mohnish · 2025</footer>
-            </blockquote>
-            <blockquote class="quote">
-              <p>"They thought of every detail we hadn't thought of, and quietly removed every detail we shouldn't have to think about. Both of us still talk about it as the happiest week of our lives."</p>
-              <footer>— Sanjana &amp; Soorya · 2024</footer>
-            </blockquote>
-            <blockquote class="quote">
-              <p>"You don't realise how rare it is for the founders to actually be there until you experience it. Divya was at my bridal entry. Vithika was at the door of my parents' room with chai at six the next morning."</p>
-              <footer>— Rhea &amp; Abhishek · 2023</footer>
-            </blockquote>
-            <blockquote class="quote">
-              <p>"Both of them carry an entire family on their shoulders for three days, and somehow nobody around them can tell. The grace of it is the thing we still talk about."</p>
-              <footer>— Dhriti &amp; Varun · 2024</footer>
-            </blockquote>
-            <blockquote class="quote">
-              <p>"They are the rare planners who say <em>no</em> when something will not serve you, and they say it kindly. We trusted them with everything because they earned it."</p>
-              <footer>— Kruthika &amp; Will · 2020</footer>
-            </blockquote>
+          <strong>Honeymoon Planning</strong>
+          <em>The week after the wedding, also handled.</em>
+        </li>
+        <li>
+          <div class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 4l-2 6c0 3 2 5 4 5v9h-3M11 15h3"/>
+              <path d="M23 4l2 6c0 3-2 5-4 5v9h3M21 15h-3"/>
+              <path d="M14 28h4"/>
+            </svg>
           </div>
-
-          <div class="carousel__nav">
-            <button class="carousel__btn" id="carouselPrev" aria-label="Previous testimonial" data-cursor>←</button>
-            <div class="carousel__dots" id="carouselDots" aria-label="Pagination"></div>
-            <button class="carousel__btn" id="carouselNext" aria-label="Next testimonial" data-cursor>→</button>
-          </div>
-        </div>
-
-        <a href="#cta" class="link" data-cursor>Begin a conversation</a>
-      </div>
-    </section>
-
-    <!-- ======================= 06 NEWS ======================= -->
-    <section class="news" id="news" data-fade>
-      <div class="news__head">
-        <div class="eye">Recent news</div>
-        <h2 class="section-title">From the <em>journal</em>.</h2>
-      </div>
-      <div class="news__grid">
-        <a class="post" href="https://www.divyavithika.com/planning-a-wedding-post-covid-heres-what-to-expect/" data-cursor>
-          <div class="post__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2022/09/inflation-with-green-arrow-138x138.jpg');"></div>
-          <div class="post__body">
-            <div class="post__date">21 September 2022</div>
-            <h3>Planning a wedding post COVID, here's what to expect</h3>
-            <p>If you are just starting to plan your wedding or feeling overwhelmed by all the change…</p>
-            <span class="post__more">Read on →</span>
-          </div>
-        </a>
-        <a class="post" href="https://www.divyavithika.com/a-romantic-monsoon-engagement/" data-cursor>
-          <div class="post__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2022/04/001-4-138x138.jpg');"></div>
-          <div class="post__body">
-            <div class="post__date">27 April 2022</div>
-            <h3>A Romantic Monsoon Engagement</h3>
-            <p>It was the classic beauty, fresh flowers and timeless decor that made this engagement…</p>
-            <span class="post__more">Read on →</span>
-          </div>
-        </a>
-        <a class="post" href="https://www.divyavithika.com/stunning-wedding-mandap/" data-cursor>
-          <div class="post__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2022/04/001-1-138x138.jpg');"></div>
-          <div class="post__body">
-            <div class="post__date">27 April 2022</div>
-            <h3>Stunning Wedding Mandap</h3>
-            <p>With traditional wooden pillars, Kerela boats, tiled roof, chattai flooring, kollam design…</p>
-            <span class="post__more">Read on →</span>
-          </div>
-        </a>
-        <a class="post" href="https://www.divyavithika.com/ritu-and-nikhil-decor-post/" data-cursor>
-          <div class="post__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2020/04/Ritu-and-Nikhil-101-138x138.jpg');"></div>
-          <div class="post__body">
-            <div class="post__date">25 April 2020</div>
-            <h3>Dreamy Wedding Decor</h3>
-            <p>Different themes that were visually stunning, with delectable cuisines, foot tapping music…</p>
-            <span class="post__more">Read on →</span>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- ======================= 07 CTA ======================= -->
-    <section class="cta" id="cta" data-fade>
-      <div class="cta__photo">
-        <div class="cta__img" style="background-image:url('https://www.divyavithika.com/wp-content/uploads/2025/12/Merzia-01.jpg');"></div>
-        <div class="cta__veil"></div>
-      </div>
-      <div class="cta__content">
-        <div class="cta__amp">&amp;</div>
-        <div class="eye eye--light">The next conversation</div>
-        <h2 class="section-title section-title--light">Tell us <em>your</em> story.</h2>
-        <p class="lede lede--light">Every wedding we plan begins with a slow phone call and a 15-minute questionnaire. No commitment, no follow-up unless you want one.</p>
-        <div class="cta__actions">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-divyavithika-questionnaire" target="_blank" rel="noopener" class="btn btn--paper" data-cursor>Complete our questionnaire</a>
-          <a href="mailto:info@divyavithika.com" class="btn btn--ghost-light" data-cursor>Or write to us →</a>
-        </div>
-        <ul class="cta__contacts">
-          <li><span>Divya Chauhan</span><a href="tel:+919845228614">+91 98452 28614</a></li>
-          <li><span>Vithika Agarwal</span><a href="tel:+919900239080">+91 99002 39080</a></li>
-          <li><span>Email</span><a href="mailto:info@divyavithika.com">info@divyavithika.com</a></li>
-        </ul>
-      </div>
+          <strong>Anniversary Celebrations</strong>
+          <em>For couples we've already had the privilege of marrying.</em>
+        </li>
+      </ul>
     </section>
 
   </main>
 
   <!-- ======================= FOOTER ======================= -->
-  <footer class="foot">
+  <footer class="foot" id="contact">
     <div class="foot__top">
       <div class="foot__brand">
         <img src="logo.png" alt="Divya Vithika Wedding Planners" />
@@ -489,24 +359,23 @@
         <ul>
           <li><a href="#top">Home</a></li>
           <li><a href="#weddings">Weddings</a></li>
-          <li><a href="#news">News</a></li>
           <li><a href="#founders">About</a></li>
-          <li><a href="#weddings">Services</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#cta">Contact Us</a></li>
+          <li><a href="#phases">How we work</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact Us</a></li>
         </ul>
       </div>
 
       <div class="foot__col">
         <h4>Services</h4>
         <ul>
-          <li><a href="#weddings">Full Wedding Planning</a></li>
-          <li><a href="#weddings">Destination Weddings</a></li>
-          <li><a href="#weddings">Décor &amp; Design</a></li>
-          <li><a href="#weddings">Sangeet &amp; Mehendi</a></li>
-          <li><a href="#weddings">Logistics &amp; Guests</a></li>
-          <li><a href="#weddings">Photo &amp; Film</a></li>
-          <li><a href="#weddings">Honeymoon Planning</a></li>
+          <li><a href="#services">Full Wedding Planning</a></li>
+          <li><a href="#services">Destination Weddings</a></li>
+          <li><a href="#services">Décor &amp; Design</a></li>
+          <li><a href="#services">Sangeet &amp; Mehendi</a></li>
+          <li><a href="#services">Logistics &amp; Guests</a></li>
+          <li><a href="#services">Photo &amp; Film</a></li>
+          <li><a href="#services">Honeymoon Planning</a></li>
         </ul>
       </div>
 
