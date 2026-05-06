@@ -405,6 +405,15 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   background-position: center 30%;
   will-change: transform;
 }
+/* Mobile hero video — hidden on desktop, swapped in via the @media block below */
+.hero__video {
+  display: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .hero__veil {
   position: absolute;
   inset: 0;
@@ -1507,7 +1516,8 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
     padding-bottom: 92px;
     min-height: 600px;
   }
-  .hero__inner { background-position: 62% 28%; }
+  .hero__inner { display: none; }
+  .hero__video { display: block; }
   .hero__title { font-size: clamp(38px, 12vw, 58px); line-height: 0.98; }
   .hero__lede { font-size: 14.5px; max-width: 100%; margin: 16px 0 22px; }
   .hero__eyebrow { font-size: 10px; margin-bottom: 16px; }
